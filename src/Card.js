@@ -19,23 +19,23 @@ Notes:
   this data into the component.
 */
 
-export default function Card() {
+export default function Card(props) {
   return (
     <section className="card-container">
       <img
-        src="./images/katie-zaferes.png"
+        src={`./images/${props.img}`}
         alt="katie-zaferas"
         className="card-img"
       />
       <div className="card-content">
         <img src="./images/star.png" alt="rating-star" className="card-star" />
-        <span> 5.0 </span>
-        <span className="card-rate"> (6) • </span>
-        <span className="card-rate"> USA</span>
+        <span>{props.rating} </span>
+        <span className="card-rate"> ({props.reviewCount}) • </span>
+        <span className="card-rate"> {props.location}</span>
       </div>
-      <p>Life lessons with Katie Zaferes</p>
-      <p>
-        <strong>From $136 </strong>/ person
+      <p className="card-title">{props.title}</p>
+      <p className="card-price">
+        <strong>From ${props.price} </strong>/ person
       </p>
     </section>
   );
