@@ -44,7 +44,10 @@ section {
 
 .card-container {
   width: 200px;
-  font-size: 12px;
+  font-size: 0.8rem;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-img {
@@ -67,4 +70,19 @@ section {
 
 .card-rate {
   opacity: 0.5;
+}
+
+.cards-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 5px;
+  overflow-x: auto;
+}
+.card-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-price {
+  margin-top: auto;
 }
