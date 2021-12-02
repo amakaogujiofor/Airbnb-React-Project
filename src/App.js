@@ -7,16 +7,7 @@ import Data from "./Data";
 
 export default function App() {
   const cards = Data.map((data) => {
-    return (
-      <Card
-        img={data.coverImg}
-        rating={data.stats.rating}
-        reviewCount={data.stats.reviewCount}
-        location={data.location}
-        title={data.title}
-        price={data.price}
-      />
-    );
+    return <Card key={data.id} {...data} />;
   });
 
   return (

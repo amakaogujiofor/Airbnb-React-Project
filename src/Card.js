@@ -20,10 +20,18 @@ Notes:
 */
 
 export default function Card(props) {
+  let badgeText;
+  if (props.openSpots === 0) {
+    badgeText = "SOLD OUT";
+  } else if (props.location === "Online") {
+    badgeText = "ONLINE";
+  }
+
   return (
     <section className="card-container">
+      {badgeText && <div className="card-badge">{badgeText}</div>}
       <img
-        src={`./images/${props.img}`}
+        src={`./images/${props.coverImg}`}
         alt="katie-zaferas"
         className="card-img"
       />
