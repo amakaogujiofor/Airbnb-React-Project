@@ -21,15 +21,19 @@ Notes:
 
 export default function Card(props) {
   let badgeText;
+  let onlineText;
   if (props.openSpots === 0) {
     badgeText = "SOLD OUT";
-  } else if (props.location === "Online") {
-    badgeText = "ONLINE";
+  }
+
+  if (props.location === "Online") {
+    onlineText = "ONLINE";
   }
 
   return (
     <section className="card-container">
       {badgeText && <div className="card-badge">{badgeText}</div>}
+      {onlineText && <div className="card-badge-white">{onlineText}</div>}
       <img
         src={`./images/${props.coverImg}`}
         alt="katie-zaferas"
@@ -37,8 +41,8 @@ export default function Card(props) {
       />
       <div className="card-content">
         <img src="./images/star.png" alt="rating-star" className="card-star" />
-        <span>{props.rating} </span>
-        <span className="card-rate"> ({props.reviewCount}) • </span>
+        <span>{props.stats.rating} </span>
+        <span className="card-rate"> ({props.stats.reviewCount}) • </span>
         <span className="card-rate"> {props.location}</span>
       </div>
       <p className="card-title">{props.title}</p>
