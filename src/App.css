@@ -28,7 +28,7 @@ section {
 }
 
 .hero-image {
-  max-width: 400px;
+  max-width: 350px;
   align-self: center;
 }
 
@@ -48,8 +48,16 @@ section {
   flex: 0 0 auto;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
-
+.card-badge {
+  position: absolute;
+  background-color: #fff;
+  margin: 0.5em;
+  border-radius: 3px;
+  padding: 0.3em;
+  font-weight: bold;
+}
 .card-img {
   width: 100%;
   border-radius: 10px;
