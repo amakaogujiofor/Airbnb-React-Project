@@ -52,7 +52,18 @@ section {
 }
 .card-badge {
   position: absolute;
+  background-color: rgba(255, 56, 93, 0.808);
+  color: #fff;
+  margin: 0.5em;
+  border-radius: 3px;
+  padding: 0.3em;
+  font-weight: bold;
+}
+
+.card-badge-white {
+  position: absolute;
   background-color: #fff;
+  color: rgba(255, 56, 93, 0.808);
   margin: 0.5em;
   border-radius: 3px;
   padding: 0.3em;
@@ -93,4 +104,12 @@ section {
 
 .card-price {
   margin-top: auto;
+}
+
+/* Media Queries */
+@media (min-width: 600px) {
+  .hero-image {
+    max-width: 600px;
+    align-self: center;
+  }
 }
